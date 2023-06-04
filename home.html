@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock  %}
+
+
+{% block banner-slider %}
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1600x400/?milk" class="d-block w-80" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x400/?grocery" class="d-block w-80" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x400/?food" class="d-block w-80" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+{% endblock banner-slider %}
+
+{% block information %}
+<div class="container my-3">
+    <div class="row bg-success text-center text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class = "fs-5"> Welcome to <b>DairyStore.com</b>, your one-stop destination for all your dairy needs! 
+            We pride ourselves on providing the finest quality dairy products to satisfy your taste buds. 
+            With a wide range of delicious offerings, we aim to cater to every dairy lover's cravings.
+
+            Explore our extensive selection of products, carefully curated to ensure freshness and flavor. 
+            From rich and creamy milk to an array of delectable cheeses, 
+            we have something to delight every palate
+        </small>
+        </div>
+    </div>
+
+    {% endblock information %}
+
+
+
+
+{% block main-content %}
+
+<div class="container">
+<h2 class="text-center">Dairy Products</h2>
+<br></br>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="https://source.unsplash.com/300x100/?milk">
+        <div class="card-body">
+          <p class="card-text">Milk Products</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-body-secondary">45 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+          <img src="https://source.unsplash.com/300x100/?Desserts">
+        <div class="card-body">
+          <p class="card-text">Milk By-Products</p>
+          <div class="d-flex justify-content-between align-items-center">
+           
+            <small class="text-body-secondary">30 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+          <img src="https://source.unsplash.com/300x100/?yogurt">
+        <div class="card-body">
+          <p class="card-text">Curd Milk Products</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-body-secondary">30 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+{% endblock main-content %}
