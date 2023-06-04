@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-29s38oo@(=p=l%&-qsa*tq1&+0gbiob=7j8kg55s@ab=7l%#m8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -123,5 +123,11 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+#for deployment
+import os
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path,join(BASE_DIR,'staticfiles_build','static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
